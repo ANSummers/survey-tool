@@ -1,39 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Technical Challenge for Epiphany</title>
     <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body>
-     <header>
-         
+  </head>
+  <body>
+    <header>
       <div class="logo">
         <a href="http://ansummers.dev" target="_blank">
-        <img src="resources/abbatar.png" alt="abbatar" />
+          <img src="resources/abbatar.png" alt="abbatar" />
         </a>
       </div>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      
     </header>
 
-     <!-- Introduction -->
+    <!-- Introduction -->
     <section class="intro" id="home">
       <h1 class="section__title section__title--intro">
         Survey Tool <strong>Coding Challenge</strong>
       </h1>
-      <p class="section__subtitle section__subtitle--intro">Solution by Abbie Summers</p>
-      
+      <p class="section__subtitle section__subtitle--intro">
+        Solution by Abbie Summers
+      </p>
     </section>
+
+    <!-- Image Slider  -->
+
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img
+          src="resources/img_statement_6.png"
+          id="lastClone"
+          alt="Meme of Star Wars character, Han Solo accompanied by a misquote.
+          'Beam me up Spocky' - Captain Patrick Stuart."
+        />
+        <img
+          src="resources/img_statement_1.png"
+          alt="'Use the force, Luke' - Dumbledore. This is a famous Star Wars quote, 
+          incorrectly attributed to a Harry Potter character, and accompanied by an 
+          image of Star Trek actor Patrick Stewart."
+        />
+        <img
+          src="resources/img_statement_2.png"
+          alt="'That's no Moon, it's a Space Station' - Snape. This is a famous 
+          Star Wars quote, incorrectly attributed to a Harry Potter character, and 
+          accompanied by an image of Lord of the Rings actor Ian McKellen."
+        />
+        <img
+          src="resources/img_statement_3.png"
+          alt="'May the Force be With You' - Dr. Who. This is a famous Star Wars quote,
+          incorrectly attributed an unrelated science fiction series, and accompanied
+          by an image of Spock, a Star Trek character."
+        />
+        <img
+          src="resources/img_statement_4.png"
+          alt="'Fear is the path to the Dark Side. Fear leads to anger. Anger leads to 
+          hate. Hate leads to suffering.' - Master Splinter. This is a famous Star Wars
+          quote, incorrectly attributed to a Teenage Mutant Ninja Turtles character, and 
+          accompanied by an image of Karate Kid actor Pat Morita."
+        />
+        <img
+          src="resources/img_statement_5.png"
+          alt="'I have a dream.' - Nelson Mandela (1918-2013). This is a famous 
+          Martin Luther King Jr. quote, incorrectly attributed to Former president of South
+          Africa, and accompanied by an image of American actor Morgan Freeman."
+        />
+        <img
+          src="resources/img_statement_6.png"
+          alt="Meme of Star Wars character, Han Solo
+          accompanied by a misquote. 'Beam me up Spocky' - Captain Patrick Stuart."
+        />
+        <img
+          src="resources/img_statement_1.png"
+          id="firstClone"
+          alt="'Use the force, Luke' - Dumbledore. This is a famous Star Wars quote, 
+          incorrectly attributed to a Harry Potter character, and accompanied by an 
+          image of Star Trek actor Patrick Stewart."
+        />
+      </div>
+    </div>
+    <button id="prevBtn">Prev</button>
+    <button id="nextBtn">Next</button>
 
     <footer class="footer">
       <a href="mailto:abbie@summers.gg" class="footer-link">abbie@summers.gg</a>
     </footer>
-    <script src="js/index.js"></script>    
-
-    </body>
-
+    <script src="js/index.js"></script>
+  </body>
 </html>
