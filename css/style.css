@@ -37,6 +37,7 @@ strong {
 .carousel-container {
   width: 60%;
   margin: auto;
+  overflow: hidden;
 }
 
 .carousel-slide {
@@ -50,6 +51,28 @@ strong {
 }
 
 /* Button */
+
+#previousBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 10%;
+  font-size: 50px;
+  color: black;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  right: 10%;
+  font-size: 50px;
+  color: black;
+  opacity: 0.5;
+  cursor: pointer;
+}
 
 /* Typography */
 
