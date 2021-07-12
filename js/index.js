@@ -1,42 +1,36 @@
-const carouselSlide = document.querySelector(".carousel-slide");
-const carouselImages = document.querySelectorAll(".carousel-slide img");
+var slidePosition = 1;
+SlideShow(slidePosition);
 
-// Buttons
+// forward/Back controls
+function plusSlides(n) {
+  SlideShow((slidePosition += n));
+}
 
-const previousBtn = document.querySelector("#previousBtn");
-const nextBtn = document.querySelector("#nextBtn");
+// execute rating
+function plusSlides(n) {
+  SlideShow((slidePosition += n));
+}
+//  images controls
+function currentSlide(n) {
+  SlideShow((slidePosition = n));
+}
 
-// Counter
-let counter = 1;
-const size = carouselImages[0].clientWidth;
-
-carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-
-// Button Listeners
-
-nextBtn.addEventListener("click", () => {
-  if (counter >= carouselImages.length - 1) return;
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  counter++;
-  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-});
-
-previousBtn.addEventListener("click", () => {
-  if (counter <= 0) return;
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  counter--;
-  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-});
-
-carouselSlide.addEventListener("transitionend", () => {
-  if (carouselImages[counter].id === "lastClone") {
-    carouselSlide.style.transition = "none";
-    counter = carouselImages.length - 2;
-    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+function SlideShow(n) {
+  var i;
+  var slides = document.getElementsByClassName("Containers");
+  var circles = document.getElementsByClassName("dots");
+  if (n > slides.length) {
+    slidePosition = 1;
   }
-  if (carouselImages[counter].id === "firstClone") {
-    carouselSlide.style.transition = "none";
-    counter = carouselImages.length - counter;
-    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+  if (n < 1) {
+    slidePosition = slides.length;
   }
-});
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < circles.length; i++) {
+    circles[i].className = circles[i].className.replace(" enable", "");
+  }
+  slides[slidePosition - 1].style.display = "block";
+  circles[slidePosition - 1].className += " enable";
+}
