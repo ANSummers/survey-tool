@@ -18,7 +18,6 @@ function currentSlide(n) {
 function SlideShow(n) {
   var i;
   var slides = document.getElementsByClassName("Containers");
-
   if (n > slides.length) {
     slidePosition = 1;
   }
@@ -28,7 +27,5 @@ function SlideShow(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-
   slides[slidePosition - 1].style.display = "block";
-  circles[slidePosition - 1].className += " enable";
 }
