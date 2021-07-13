@@ -52,27 +52,7 @@ nav a {
 /* Main Content */
 
 .main-content {
-  position: relative;
-  top: 5.3125rem;
   background-color: #4a4a4a;
-}
-
-.center {
-  text-align: center;
-}
-
-.button {
-  border-radius: 4px;
-  background-color: #4a4a4a;
-  color: white;
-}
-
-.image-container {
-  overflow: hidden;
-}
-.image-container img {
-  display: block;
-  max-width: 100%;
 }
 
 /* Survey Section  */
